@@ -1,0 +1,386 @@
+:root{
+    --logo-color: #e8980c;
+    --black-color: #000;
+    --style_1: rgb(112, 112, 112);
+    --style_2: rgb(212, 1, 1);
+    --style_3: rgb(67, 5, 17);
+    --style_4: rgb(164, 5, 158);
+    --style_5: rgb(0, 100, 214);
+    --style_6: rgb(16, 155, 28);
+    --style_7: rgb(226, 116, 26);
+    --shade_1: #e0e0dd;
+    --shade_2: rgb(182, 179, 179);
+    --shade_3: #333;
+    --max-width: 1100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    background: var(--light-color);
+  }
+
+a{
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+h1{
+    font-size: 1.0rem;
+    text-align: left;
+    padding: 10px 0;
+}
+
+p{
+    font-size: 0.8rem;
+    text-align: left;
+    line-height: 1.2rem;
+    padding: 10px 0;
+}
+
+ul{
+    list-style: none;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px;
+}
+
+.btn_red{
+    background: var(--style_2);
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+.btn_red:hover{
+    color: #fff;
+    background: var(--style_3);
+}
+
+.bg-dark{
+    background: var(--shade_3);
+    color: #fff;
+}
+
+.bg-red{
+    background:rgb(67, 5, 17);
+    color: #fff;
+}
+
+.bg-white {
+    background: #fff;
+    color: #000;
+  }
+
+.icon{
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5%;
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+
+.review{
+    background: var(--logo-color);
+    color: #000;
+}
+
+.sports{
+    background: var(--style_4);
+    color: #fff;
+}
+
+.fishing{
+    background: var(--style_6);
+    color: #fff;
+}
+
+.travel{
+    background: var(--style_5);
+    color: #fff;
+}
+
+.courses{
+    background: var(--style_7);
+    color: #fff;
+}
+
+.main-nav{
+    padding: 5px;
+    position: sticky;
+    z-index: 1;
+    background: var(--shade_1);
+}
+
+.main-nav > div{
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+.main-nav img{
+    max-width: 220px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    text-align: center;
+}
+
+.container >*{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.container .social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .social >*{
+    margin: 0 5px;
+    color: var(--black-color);
+}
+
+.container ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.container ul li {    
+    margin: 0 10px;
+}
+
+.container ul li a{
+    display: inline-block;
+    color: #fff;
+    background: var(--style_2);
+    padding: 20px; 
+    height: 65px;
+    width: 100px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}    
+
+.container ul li a:hover{
+    color: #fff;
+    background: var(--style_3);
+}
+
+.banner{
+    background: #333;
+    height: 40vh;
+    position: relative;
+}
+
+.banner:before{
+    content: '';
+    position: absolute;
+    background: url(../images/sailor_05.jpg) no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.banner_content{
+    max-width: var(--max-width);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    margin: auto;  
+}
+
+.banner_content > *{
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+    z-index: 0;
+}
+
+.banner_content h1{
+    color:#fff;
+    font-size: 2.0rem;
+    margin-bottom: 5px;
+}
+
+.banner_content p {
+    color:#fff;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.categories a{
+    color: #fff;
+    padding: 10px;
+    background: var(--style_2);
+    margin: 5px;
+    opacity: 0.8;
+}
+
+.categories {
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+    transform: scale(0);
+}
+
+.showcase {
+    background: var(--shade_1);
+    padding: 10px;
+}
+
+.showcase_container{
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+.showcase .showcase_content {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 20px;
+}
+
+.showcase .showcase_content .fragment{
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 100%;
+    padding: 10px;
+    align-items: center;
+}
+
+.showcase .showcase_content .fragment >*{
+    height: 100%;
+    width: 100%;
+    align-items: center; 
+    margin: auto; 
+}
+
+.showcase .showcase_content .fragment > div{
+    height: 180px;
+}    
+
+.showcase .showcase_content .fragment:first-child,
+.showcase .showcase_content .fragment:last-child{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    grid-column: 1 / span 2;
+}
+
+.showcase .showcase_content .fragment:nth-child(3) .icon,
+.showcase .showcase_content .fragment:nth-child(4) .icon,
+.showcase .showcase_content .fragment:nth-child(5) .icon {
+    margin-top: 10px;
+}
+
+.showcase .showcase_content .fragment:nth-child(1) .one{
+    background: url(../images/sailor_01.jpg) no-repeat center center/cover;
+}
+
+.showcase .showcase_content .fragment:nth-child(3) .three{
+    background: url(../images/sailor_02.jpg) no-repeat center center/cover;
+}
+
+.showcase .showcase_content .fragment:nth-child(4) .four{
+    background: url(../images/sailor_03.jpg) no-repeat center center/cover;
+}
+
+.showcase .showcase_content .fragment:nth-child(5) .five{
+    background: url(../images/sailor_04.jpg) no-repeat center center/cover;
+}
+
+.showcase .showcase_content .fragment:nth-child(7) .five{
+    background: url(../images/sailor_05.jpg) no-repeat center center/cover;
+}    
+
+.showcase .showcase_content .fragment:last-child{
+    grid-column: 2 /span 2;
+}   
+
+.showcase .showcase_content .fragment:nth-child(4) img{
+    padding-bottom: 10px;
+}   
+
+.footer{
+    background: var(--shade_3);
+}
+
+.footer_container{
+    max-width: var(--max-width);
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.footer_container_up{
+    display: flex;
+    color: #fff;
+}
+
+.footer_container_up a{
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+}
+
+
+.footer_container_up > div{
+    flex: 25%;
+    padding: 20px;
+}
+
+.footer_container_up .newsletter,
+.footer_container_up .site{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_container_up .site a{
+    margin-top: 10px;
+    padding: 5px;
+    border-bottom: #fff dotted 0.2px;
+}
+
+.footer_container_up .newsletter input{
+    padding: 10px;
+    margin-bottom: 10px;
+}  
+
+.footer_container_up .club a {
+    background: var(--style_5);
+    transition: all 0.2 ease;
+}
+
+.footer_container_up .club a:hover {
+    background: var(--style_7);
+}
+
+.footer_container_down{
+    background: var(--style_1);
+    margin: 10px; 
+    padding: 0 5px;
+}
+
+.footer_container_down >*{
+    text-align: center;
+}
